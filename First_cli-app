@@ -1,0 +1,31 @@
+var readLine=require("readline-sync");
+var score=0;
+console.log("Welcom to Game");
+var playerName=readLine.question("Enter Yor Name to Play : ");
+console.log("Welcome "+playerName+"\nAnswer the simple questions :\n");
+function play(que,o1,o2,o3,ans)
+{
+  console.log(que);
+  console.log(o1);
+  console.log(o2);
+  console.log(o3);
+  var answer=readLine.question("Enter your answer : ");
+  if(answer==ans)
+  {
+    console.log("You are right");
+    score=score+1;
+  }
+  else{
+     console.log("You are wrong");
+    score=score-1;
+  }
+  console.log("your score is : "+score+" out of 5\n");
+ 
+}
+
+play("What is Gulzar's full name?",'a-Khan Gulzar Ahmed','b-Khan Gulzar','c-Gulzar Ahmed','a');
+play("Where is Gulzar living?",'a-Bangaluru','b-Mumbai','c-UP','b');
+play("What is his Qualification?",'a-Intermidiate','b-Master','c-Graduate','c');
+play("what it he like as profession?",'a-DBA','b-Programmer','c-Tester','b');
+play("His native place?",'a-UP','b-Bangaluru','c-Mumbai','a');
+ console.log("\nVisit web application in portfolio having MCQs for answer !");
